@@ -13,8 +13,9 @@
                 <div class="col-md-12">
                     <div class="card-header bg-white">
                         <h3 class="mt-2">Dashboard</h3>
-                        <hr>
                     </div>
+
+                    <hr>
 
                     <div class="card-body">
                         <div class="row mb-2">

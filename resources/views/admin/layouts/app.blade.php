@@ -47,7 +47,7 @@
                 icon: "success",
                 title: "{{ session('success') }}",
                 showConfirmButton: false,
-                timer: 1500
+                timer: 2500
             });
         </script>
     @endsession
@@ -59,7 +59,7 @@
                 icon: "error",
                 title: "{{ session('error') }}",
                 showConfirmButton: false,
-                timer: 1500
+                timer: 2500
             });
         </script>
     @endsession
