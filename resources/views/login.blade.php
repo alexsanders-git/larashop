@@ -13,11 +13,11 @@
     <div class="container">
         <div class="row my-5">
             <div class="col-md-6 mx-auto">
-                @section('error')
+                @session('error')
                     <div class="alert alert-danger my-2">
                         {{ session('error') }}
                     </div>
-                @endsection
+                @endsession
                 <div class="card shadow-sm p-5">
                     <div class="card-header bg-white text-center">
                         <h3 class="mt-2">
