@@ -159,7 +159,9 @@
                                             class="form-control summernote @error('desc') is-invalid @enderror"
                                             aria-describedby="helpId"
                                             placeholder="Description*" 
-                                        ></textarea>
+                                        >
+                                            {{ old('desc') }}
+                                        </textarea>
                                         @error('desc')
                                             <span class="invalid-feedback">
                                                 <strong>{{ $message }}</strong>
@@ -196,7 +198,7 @@
                                     </div>
 
                                     <div class="mt-2">
-                                        <img src="#" alt="" id="first_image_preview" class="d-none img-fluid rounded mb-2" width="100" height="100">
+                                        <img src="#" id="first_image_preview" class="d-none img-fluid rounded mb-2" width="100" height="100">
                                     </div>
 
                                     <div class="mb-3">
@@ -212,7 +214,7 @@
                                     </div>
 
                                     <div class="mt-2">
-                                        <img src="#" alt="" id="second_image_preview" class="d-none img-fluid rounded mb-2" width="100" height="100">
+                                        <img src="#" id="second_image_preview" class="d-none img-fluid rounded mb-2" width="100" height="100">
                                     </div>
 
                                     <div class="mb-3">
@@ -228,7 +230,7 @@
                                     </div>
 
                                     <div class="mt-2">
-                                        <img src="#" alt="" id="third_image_preview" class="d-none img-fluid rounded mb-2" width="100" height="100">
+                                        <img src="#" id="third_image_preview" class="d-none img-fluid rounded mb-2" width="100" height="100">
                                     </div>
 
                                     <button type="submit" class="btn btn-sm btn-dark">
