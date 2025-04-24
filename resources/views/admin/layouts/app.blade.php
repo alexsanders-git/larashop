@@ -96,4 +96,30 @@
         }
     </script>
 
+    <script>
+        function handleImageInputChange(input, image) {
+            document.getElementById(input).addEventListener('change', function () {
+                readUrl(this, image);
+            })
+        }
+
+        function readUrl(input, image) {
+            if (input.files && input.files[0]) {
+                let reader = new FileReader();
+
+                reader.onload = function (e) {
+                    document.getElementById(image).classList.remove('d-none');
+                    document.getElementById(image).setAttribute('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        handleImageInputChange('thumbnail', 'thumbnail_preview');
+        handleImageInputChange('first_image', 'first_image_preview');
+        handleImageInputChange('second_image', 'second_image_preview');
+        handleImageInputChange('third_image', 'third_image_preview');
+    </script>
+
 </html>

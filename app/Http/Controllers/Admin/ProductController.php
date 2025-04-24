@@ -169,7 +169,7 @@ class ProductController extends Controller
     {
         $image_name = time().'_'.$file->getClientOriginalName();
         $file->storeAs('images/products', $image_name, 'public');
-        return 'storage/images/products'.$image_name;
+        return 'storage/images/products/'.$image_name;
     }
 
     /**
