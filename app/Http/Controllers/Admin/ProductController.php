@@ -117,22 +117,22 @@ class ProductController extends Controller
             $data['status'] = $request->status;
 
             if ($request->has('thumbnail')) {
-                $this->removeProductImageFromStorage($request->file('thumbnail'));
+                $this->removeProductImageFromStorage($product->thumbnail);
                 $data['thumbnail'] = $this->saveImage($request->file('thumbnail'));
             }
 
             if ($request->has('first_image')) {
-                $this->removeProductImageFromStorage($request->file('first_image'));
+                $this->removeProductImageFromStorage($product->first_image);
                 $data['first_image'] = $this->saveImage($request->file('first_image'));
             }
 
             if ($request->has('second_image')) {
-                $this->removeProductImageFromStorage($request->file('second_image'));
+                $this->removeProductImageFromStorage($product->second_image);
                 $data['second_image'] = $this->saveImage($request->file('second_image'));
             }
 
             if ($request->has('third_image')) {
-                $this->removeProductImageFromStorage($request->file('third_image'));
+                $this->removeProductImageFromStorage($product->third_image);
                 $data['third_image'] = $this->saveImage($request->file('third_image'));
             }
 
@@ -177,7 +177,7 @@ class ProductController extends Controller
      */
     public function removeProductImageFromStorage($file)
     {
-        $path = public_path('storage/images/products'.$file);
+        $path = public_path($file);
 
         if (File::exists($path)) {
             File::delete($path);

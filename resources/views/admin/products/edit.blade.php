@@ -253,32 +253,32 @@
                                     </div>
 
                                     <div class="mb-2">
-                                    <div class="form-check">
-                                        <input 
-                                            type="radio" 
-                                            name="status" 
-                                            id="status" 
-                                            value="1" 
-                                            class="form-check-input" 
-                                            @checked($product->status) 
-                                        />
-                                        <label class="form-check-label" for="status">
-                                            In Stock
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input 
-                                            type="radio" 
-                                            name="status" 
-                                            id="status" 
-                                            value="0" 
-                                            class="form-check-input" 
-                                            @checked(!$product->status) 
-                                        />
-                                        <label class="form-check-label" for="">
-                                            Out of Stock
-                                        </label>
-                                    </div>
+                                        <div class="form-check">
+                                            <input 
+                                                type="radio" 
+                                                name="status" 
+                                                id="status" 
+                                                value="1" 
+                                                class="form-check-input" 
+                                                @checked($product->status) 
+                                            />
+                                            <label class="form-check-label" for="status">
+                                                In Stock
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input 
+                                                type="radio" 
+                                                name="status" 
+                                                id="status" 
+                                                value="0" 
+                                                class="form-check-input" 
+                                                @checked(!$product->status) 
+                                            />
+                                            <label class="form-check-label" for="">
+                                                Out of Stock
+                                            </label>
+                                        </div>
                                     </div>
 
                                     <button type="submit" class="btn btn-sm btn-dark">
