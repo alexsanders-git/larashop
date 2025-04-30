@@ -22,7 +22,7 @@ class ProductController extends Controller
                     'categories' => Category::has('products')->get(),
                     'colors' => Color::has('products')->get(),
                     'sizes' => Size::has('products')->get(),
-                    'brand' => Brand::has('products')->get(),
+                    'brands' => Brand::has('products')->get(),
                 ]);
     }
 
@@ -47,7 +47,7 @@ class ProductController extends Controller
                     'categories' => Category::has('products')->get(),
                     'colors' => Color::has('products')->get(),
                     'sizes' => Size::has('products')->get(),
-                    'brand' => Brand::has('products')->get(),
+                    'brands' => Brand::has('products')->get(),
                     'filter' => $category->name,
                 ]);
     }
@@ -75,7 +75,7 @@ class ProductController extends Controller
                     'categories' => Category::has('products')->get(),
                     'colors' => Color::has('products')->get(),
                     'sizes' => Size::has('products')->get(),
-                    'brand' => Brand::has('products')->get(),
+                    'brands' => Brand::has('products')->get(),
                     'filter' => $color->name,
                 ]);
     }
@@ -89,7 +89,7 @@ class ProductController extends Controller
                     'categories' => Category::has('products')->get(),
                     'colors' => Color::has('products')->get(),
                     'sizes' => Size::has('products')->get(),
-                    'brand' => Brand::has('products')->get(),
+                    'brands' => Brand::has('products')->get(),
                     'filter' => $size->name,
                 ]);
     }
@@ -103,7 +103,7 @@ class ProductController extends Controller
                     'categories' => Category::has('products')->get(),
                     'colors' => Color::has('products')->get(),
                     'sizes' => Size::has('products')->get(),
-                    'brand' => Brand::has('products')->get(),
+                    'brands' => Brand::has('products')->get(),
                 ]);
     }
 }
