@@ -61,7 +61,7 @@ class ProductController extends Controller
                     'categories' => Category::has('products')->get(),
                     'colors' => Color::has('products')->get(),
                     'sizes' => Size::has('products')->get(),
-                    'brand' => Brand::has('products')->get(),
+                    'brands' => Brand::has('products')->get(),
                     'filter' => $brand->name,
                 ]);
     }
