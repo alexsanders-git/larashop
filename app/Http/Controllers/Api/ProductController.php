@@ -33,7 +33,7 @@ class ProductController extends Controller
             abort(404);
         }
 
-        return ProductResource::collection(
+        return ProductResource::make(
             $product->load(['category', 'colors', 'sizes', 'brand', 'reviews'])
         );
     }
