@@ -11,8 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 
-class UserController extends Controller
-{
+class UserController extends Controller {
 
     /** Store the new user */
     public function store( StoreUserRequest $request )
@@ -32,9 +31,9 @@ class UserController extends Controller
         if ( $request->validated() ) {
             $user = User::whereEmail( $request->email )->first();
 
-            if ( !$user || Hash::check( $request->password, $user->password ) ) {
+            if ( !$user || !Hash::check( $request->password, $user->password ) ) {
                 return response()->json( [
-                    'message' => 'These credentials do not match any of our records'
+                    'error' => 'These credentials do not match any of our records'
                 ] );
             } else {
                 return response()->json( [
