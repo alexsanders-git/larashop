@@ -60,6 +60,7 @@
                                         <label for="valid_until" class="form-label">Validity*</label>
                                         <input
                                             type="datetime-local"
+                                            step="1"
                                             min="{{ \Carbon\Carbon::now()->addDays(1) }}"
                                             class="form-control @error('valid_until') is-invalid @enderror"
                                             name="valid_until" id="valid_until"
