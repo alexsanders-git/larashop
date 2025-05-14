@@ -9,17 +9,16 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class CategoryController extends Controller
-{
+class CategoryController extends Controller {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('admin.categories.index')
-            ->with([
+        return view( 'admin.categories.index' )
+            ->with( [
                 'categories' => Category::latest()->get()
-            ]);
+            ] );
     }
 
     /**
@@ -27,68 +26,68 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.categories.create');
+        return view( 'admin.categories.create' );
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(AddCategoryRequest $request)
+    public function store( AddCategoryRequest $request )
     {
-        if ($request->validated()) {
+        if ( $request->validated() ) {
             $data = $request->validated();
-            $data['slug'] = Str::slug($request->name);
+            $data[ 'slug' ] = Str::slug( $request->name );
 
-            Category::create($data);
+            Category::create( $data );
 
-            return redirect()->route('admin.categories.index')
-                ->with('success', 'Category has been added successfully');
+            return redirect()->route( 'admin.categories.index' )
+                ->with( 'success', 'Category has been added successfully' );
         }
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Category $category)
+    public function show( Category $category )
     {
-        abort(404);
+        abort( 404 );
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Category $category)
+    public function edit( Category $category )
     {
-        return view('admin.categories.edit')
-            ->with([
+        return view( 'admin.categories.edit' )
+            ->with( [
                 'category' => $category,
-            ]);
+            ] );
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCategoryRequest $request, Category $category)
+    public function update( UpdateCategoryRequest $request, Category $category )
     {
-        if ($request->validated()) {
+        if ( $request->validated() ) {
             $data = $request->validated();
-            $data['slug'] = Str::slug($request->name);
+            $data[ 'slug' ] = Str::slug( $request->name );
 
-            $category->update($data);
+            $category->update( $data );
 
-            return redirect()->route('admin.categories.index')
-                ->with('success', 'Category has been updated successfully');
+            return redirect()->route( 'admin.categories.index' )
+                ->with( 'success', 'Category has been updated successfully' );
         }
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Category $category)
+    public function destroy( Category $category )
     {
         $category->delete();
 
-        return redirect()->route('admin.categories.index')
-            ->with('success', 'Category has been deleted successfully');
+        return redirect()->route( 'admin.categories.index' )
+            ->with( 'success', 'Category has been deleted successfully' );
     }
 }

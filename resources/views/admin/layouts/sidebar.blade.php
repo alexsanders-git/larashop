@@ -1,53 +1,60 @@
 <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
     <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu"
-        aria-labelledby="sidebarMenuLabel">
+         aria-labelledby="sidebarMenuLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="sidebarMenuLabel">Vue T-shirts</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"
-                aria-label="Close"></button>
+                    aria-label="Close"></button>
         </div>
         <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
             <ul class="nav flex-column">
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" aria-current="page"
-                        href="{{ route('admin.index') }}">
+                       href="{{ route('admin.index') }}">
                         <i class="fas fa-dashboard"></i>
                         Dashboard
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" aria-current="page"
-                        href="{{ route('admin.categories.index') }}">
+                       href="{{ route('admin.categories.index') }}">
                         <i class="fa-solid fa-layer-group"></i>
                         Categories
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" aria-current="page"
-                        href="{{ route('admin.brands.index') }}">
+                       href="{{ route('admin.brands.index') }}">
                         <i class="fa-solid fa-copyright"></i>
                         Brands
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" aria-current="page"
-                        href="{{ route('admin.colors.index') }}">
+                       href="{{ route('admin.colors.index') }}">
                         <i class="fa-solid fa-palette"></i>
                         Colors
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" aria-current="page"
-                        href="{{ route('admin.sizes.index') }}">
+                       href="{{ route('admin.sizes.index') }}">
                         <i class="fa-solid fa-expand"></i>
                         Sizes
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" aria-current="page"
-                        href="{{ route('admin.products.index') }}">
+                       href="{{ route('admin.products.index') }}">
                         <i class="fa-solid fa-tag"></i>
                         Products
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center gap-2" aria-current="page"
+                       href="{{ route('admin.coupons.index') }}">
+                        <i class="fa-solid fa-ticket"></i>
+                        Coupons
                     </a>
                 </li>
             </ul>
@@ -61,7 +68,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link d-flex align-items-center gap-2"
-                        onclick="document.getElementById('adminLogoutForm').submit()">
+                       onclick="document.getElementById('adminLogoutForm').submit()">
                         <i class="fas fa-sign-out"></i>
                         Sign out
                     </a>
