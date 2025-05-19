@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\ColorController;
 use App\Http\Controllers\Admin\CouponController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\SizeController;
 use Illuminate\Support\Facades\Route;
 
@@ -99,4 +100,9 @@ Route::prefix( 'admin' )->middleware( 'admin' )->group( function () {
     Route::get( 'orders', [ OrderController::class, 'index' ] )->name( 'admin.orders.index' );
     Route::get( 'update/{order}/order', [ OrderController::class, 'updateDeliveredAtDate' ] )->name( 'admin.orders.update' );
     Route::delete( 'delete/{order}/order', [ OrderController::class, 'destroy' ] )->name( 'admin.orders.destroy' );
+
+    /** Reviews routes */
+    Route::get( 'reviews', [ ReviewController::class, 'index' ] )->name( 'admin.reviews.index' );
+    Route::get( 'update/{review}/{status}/review', [ ReviewController::class, 'toggleApproveStatus' ] )->name( 'admin.reviews.update' );
+    Route::delete( 'delete/{review}/review', [ ReviewController::class, 'destroy' ] )->name( 'admin.reviews.destroy' );
 } );
