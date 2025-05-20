@@ -9,71 +9,101 @@
         <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" aria-current="page"
-                       href="{{ route('admin.index') }}">
+                    <a
+                        href="{{ route('admin.index') }}"
+                        class="nav-link d-flex align-items-center gap-2 @if(request()->routeIs('admin.index')) text-dark @endif"
+                        aria-current="page"
+                    >
                         <i class="fas fa-dashboard"></i>
                         Dashboard
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" aria-current="page"
-                       href="{{ route('admin.categories.index') }}">
+                    <a
+                        href="{{ route('admin.categories.index') }}"
+                        class="nav-link d-flex align-items-center gap-2 @if(request()->routeIs('admin.categories.index')) text-dark @endif"
+                        aria-current="page"
+                    >
                         <i class="fa-solid fa-layer-group"></i>
                         Categories
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" aria-current="page"
-                       href="{{ route('admin.brands.index') }}">
+                    <a
+                        href="{{ route('admin.brands.index') }}"
+                        class="nav-link d-flex align-items-center gap-2 @if(request()->routeIs('admin.brands.index')) text-dark @endif"
+                        aria-current="page"
+                    >
                         <i class="fa-solid fa-copyright"></i>
                         Brands
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" aria-current="page"
-                       href="{{ route('admin.colors.index') }}">
+                    <a
+                        href="{{ route('admin.colors.index') }}"
+                        class="nav-link d-flex align-items-center gap-2 @if(request()->routeIs('admin.colors.index')) text-dark @endif"
+                        aria-current="page"
+                    >
                         <i class="fa-solid fa-palette"></i>
                         Colors
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" aria-current="page"
-                       href="{{ route('admin.sizes.index') }}">
+                    <a
+                        href="{{ route('admin.sizes.index') }}"
+                        class="nav-link d-flex align-items-center gap-2 @if(request()->routeIs('admin.sizes.index')) text-dark @endif"
+                        aria-current="page"
+                    >
                         <i class="fa-solid fa-expand"></i>
                         Sizes
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" aria-current="page"
-                       href="{{ route('admin.products.index') }}">
+                    <a
+                        href="{{ route('admin.products.index') }}"
+                        class="nav-link d-flex align-items-center gap-2 @if(request()->routeIs('admin.products.index')) text-dark @endif"
+                        aria-current="page"
+                    >
                         <i class="fa-solid fa-tag"></i>
                         Products
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" aria-current="page"
-                       href="{{ route('admin.coupons.index') }}">
+                    <a
+                        href="{{ route('admin.coupons.index') }}"
+                        class="nav-link d-flex align-items-center gap-2 @if(request()->routeIs('admin.coupons.index')) text-dark @endif"
+                        aria-current="page"
+                    >
                         <i class="fa-solid fa-ticket"></i>
                         Coupons
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" aria-current="page"
-                       href="{{ route('admin.orders.index') }}">
+                    <a
+                        href="{{ route('admin.orders.index') }}"
+                        class="nav-link d-flex align-items-center gap-2 @if(request()->routeIs('admin.orders.index')) text-dark @endif"
+                        aria-current="page"
+                    >
                         <i class="fa-solid fa-cart-shopping"></i>
                         Orders
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" aria-current="page"
-                       href="{{ route('admin.reviews.index') }}">
+                    <a
+                        href="{{ route('admin.reviews.index') }}"
+                        class="nav-link d-flex align-items-center gap-2 @if(request()->routeIs('admin.reviews.index')) text-dark @endif"
+                        aria-current="page"
+                    >
                         <i class="fa-solid fa-star"></i>
                         Reviews
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" aria-current="page"
-                       href="{{ route('admin.users.index') }}">
+                    <a
+                        href="{{ route('admin.users.index') }}"
+                        class="nav-link d-flex align-items-center gap-2 @if(request()->routeIs('admin.users.index')) text-dark @endif"
+                        aria-current="page"
+                    >
                         <i class="fa-solid fa-users"></i>
                         Users
                     </a>
