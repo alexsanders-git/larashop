@@ -41,7 +41,7 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    protected $append = [
+    protected $appends = [
         'image_path'
     ];
 
@@ -60,15 +60,15 @@ class User extends Authenticatable
 
     public function orders()
     {
-        return $this->hasMany(Order::class)
-            ->with('products')
+        return $this->hasMany( Order::class )
+            ->with( 'products' )
             ->latest();
     }
 
     public function getImagePathAttribute()
     {
-        if ($this->profile_image) {
-            return asset($this->profile_image);
+        if ( $this->profile_image ) {
+            return asset( $this->profile_image );
         } else {
             return 'https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527_1280.png';
         }
