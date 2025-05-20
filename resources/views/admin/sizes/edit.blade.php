@@ -26,10 +26,10 @@
                                     <div class="mb-3">
                                         <label for="name" class="form-label">Name*</label>
                                         <input type="text" class="form-control @error('name') is-invalid @enderror"
-                                            name="name" id="name" value="{{old('name', $size->name)}}"
-                                            aria-describedby="helpId" placeholder="Name*" />
+                                               name="name" id="name" value="{{old('name', $size->name)}}"
+                                               aria-describedby="helpId" placeholder="Name*"/>
                                         @error('name')
-                                            <span class="invalid-feedback">
+                                        <span class="invalid-feedback">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
